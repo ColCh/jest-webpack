@@ -1,4 +1,4 @@
-# jest-webpack
+# jest-webpack [![Build Status](https://travis-ci.org/ColCh/jest-webpack.svg)](https://travis-ci.org/ColCh/jest-webpack)
 
 Plugin to use [webpack](http://webpack.github.io/) with [jest](https://facebook.github.io/jest/)
 
