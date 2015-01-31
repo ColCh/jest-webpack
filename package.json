@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "jest-cli": "^0.2.2",
+    "jshint": "^2.6.0",
     "mocha": "^2.1.0",
     "should": "^4.6.2"
   }
