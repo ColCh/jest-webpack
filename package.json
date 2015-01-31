@@ -1,0 +1,25 @@
+{
+  "name": "jest-webpack",
+  "version": "0.1.0",
+  "description": "Webpack jest plugin",
+  "main": "preprocessor.js",
+  "scripts": {
+    "test": "jshint --config=.jshintrc preprocessor.js && mocha --harmony"
+  },
+  "keywords": [
+    "jest",
+    "webpack"
+  ],
+  "author": "ColCh <colchgh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "deasync": "0.0.8",
+    "memory-fs": "^0.2.0",
+    "webpack": "^1.5.3"
+  },
+  "devDependencies": {
+    "jest-cli": "^0.2.2",
+    "mocha": "^2.1.0",
+    "should": "^4.6.2"
+  }
+}
