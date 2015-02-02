@@ -13,7 +13,7 @@
   "author": "ColCh <colchgh@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "deasync": "0.0.8",
+    "enhanced-resolve": "^0.8.4",
     "memory-fs": "^0.2.0",
     "webpack": "^1.5.3"
   },

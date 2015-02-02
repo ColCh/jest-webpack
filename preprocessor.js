@@ -1,9 +1,17 @@
 'use strict';
 
-var webpack = require('webpack');
+// Using 'lib/webpack.web.js'
+var webpackPackageJson = require('webpack/package.json');
+var webpack = require('webpack/' + webpackPackageJson.web);
+
 var MemoryFileSystem = require('memory-fs');
 
-var fs = new MemoryFileSystem();
+var EnhancedResolve = require('enhanced-resolve');
+var SyncNodeJsInputFileSystem = EnhancedResolve.SyncNodeJsInputFileSystem;
+
+// Store FS among preprocess calls
+var memoryFs = new MemoryFileSystem();
+var syncFs = new SyncNodeJsInputFileSystem();
 
 module.exports = {
   process: function (src, filename) {
@@ -21,24 +29,14 @@ module.exports = {
         }
     };
 
-    var compiler = webpack(options);
+    options.outputFileSystem = memoryFs;
+    options.inputFileSystem = syncFs;
 
-    compiler.outputFileSystem = fs;
+    webpack(options).run();
 
-    var stats = null;
+    var content = '' + memoryFs.readFileSync(filename);
 
-    compiler.run(function () {
-        stats = true;
-    });
-
-    while (stats === null) {
-        require('deasync').sleep(100);
-    }
-
-    var contentBuffer = fs.readFileSync(filename);
-    var content = contentBuffer + '';
-
-    fs.unlinkSync(filename);
+    memoryFs.unlinkSync(filename);
 
     return content;
   }
