@@ -17,6 +17,10 @@
     "memory-fs": "^0.2.0",
     "webpack": "^1.5.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/ColCh/jest-webpack.git"
+  },
   "devDependencies": {
     "jest-cli": "^0.2.2",
     "jshint": "^2.6.0",
