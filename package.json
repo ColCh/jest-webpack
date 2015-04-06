@@ -15,6 +15,7 @@
   "dependencies": {
     "enhanced-resolve": "^0.8.4",
     "memory-fs": "^0.2.0",
+    "pkginfo": "^0.3.0",
     "webpack": "^1.5.3"
   },
   "repository": {
