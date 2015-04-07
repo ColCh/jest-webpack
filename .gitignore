@@ -7,3 +7,4 @@ npm-debug.log
 Vagrantfile
 .vagrant
 docker-compose.yml
+.idea
