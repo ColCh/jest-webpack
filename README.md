@@ -2,6 +2,12 @@
 
 Plugin to use [webpack](http://webpack.github.io/) with [jest](https://facebook.github.io/jest/)
 
+## Warning
+
+This package is a work in progress, may contain unexpected behaviour and other issues. Almost it is an experiment.
+
+*For best experience, use not the code, but the idea.*
+
 ## Installation
 
 ```sh
