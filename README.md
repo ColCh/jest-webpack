@@ -16,6 +16,8 @@ $ npm install --save-dev jest-webpack
 
 ## Usage
 
+See [test/fixtures/jest_tests](test/fixtures/jest_tests) dir for example. 
+
 Update `package.json` with `jest.scriptPreprocessor`:
 
 ```json
