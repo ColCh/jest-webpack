@@ -8,3 +8,4 @@ Vagrantfile
 .vagrant
 docker-compose.yml
 .idea
+coverage

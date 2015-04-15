@@ -4,7 +4,11 @@
   "description": "Webpack jest plugin",
   "main": "preprocessor.js",
   "scripts": {
-    "test": "jshint --config=.jshintrc preprocessor.js && mocha --harmony"
+    "lint": "jshint --config=.jshintrc preprocessor.js",
+    "pretest": "npm run lint",
+    "test": "mocha --harmony",
+    "precover": "npm run lint",
+    "cover": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha"
   },
   "keywords": [
     "jest",
@@ -24,6 +28,7 @@
   },
   "devDependencies": {
     "coffee-loader": "^0.7.2",
+    "istanbul": "^0.3.13",
     "jest-cli": "^0.2.2",
     "jshint": "^2.6.0",
     "mocha": "^2.1.0",

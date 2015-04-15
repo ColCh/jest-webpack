@@ -1,3 +1,13 @@
 language: node_js
+
 node_js:
-- "0.11"
+  - "0.11"
+
+script: "npm run cover"
+
+addons:
+  code_climate:
+    repo_token: 78b7f852e1f663ce59b6f83e1dff6992eb4b30fbef6b3c67703d5bf549607ab8
+
+after_script:
+  - codeclimate < coverage/lcov.info
