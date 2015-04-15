@@ -25,3 +25,11 @@ Update `package.json` with `jest.scriptPreprocessor`:
   }
 }
 ```
+
+Use `jest-webpack-config` option to point webpack config path:
+
+```json
+{
+  "jest-webpack-config": "jest-webpack.config.js"
+}
+```
