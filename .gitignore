@@ -4,7 +4,6 @@
 .haste_cache
 node_modules
 npm-debug.log
-Vagrantfile
 .vagrant
 docker-compose.yml
 .idea
