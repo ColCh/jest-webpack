@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "chef/centos-7.0"
+  config.vm.box = "ubuntu/trusty64"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -52,13 +52,8 @@ Vagrant.configure(2) do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-    vb.memory = "1024"
-    vb.cpus = 2
-    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-    vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-    vb.customize ["modifyvm", :id, "--ioapic", "on"]
-    vb.customize ["modifyvm", :id, "--hwvirtex", "on"]
-    vb.customize ["modifyvm", :id, "--clipboard", "bidirectional"]
+    vb.memory = "512"
+    vb.cpus = 1
   end
   #
   # View the documentation for the provider you are using for more
@@ -79,10 +74,8 @@ Vagrant.configure(2) do |config|
   #   sudo apt-get install -y apache2
   # SHELL
   config.vm.provision "shell", inline: <<-SHELL
-    chown -R vagrant:vagrant /home/vagrant
-    yum groupinstall 'Development Tools'
-    curl -sL https://rpm.nodesource.com/setup | bash -
-    yum install -y nodejs git npm gcc-c++
+    apt-get update
+    apt-get install -yy build-essential
     su vagrant -c 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.25.1/install.sh | bash'
     source /home/vagrant/.nvm/nvm.sh
   SHELL
