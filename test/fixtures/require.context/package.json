@@ -1,0 +1,10 @@
+{
+  "jest": {
+    "scriptPreprocessor": "../../../"
+  },
+  "jest-webpack-config": "jest-webpack.config.js",
+  "dependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.9.1"
+  }
+}
