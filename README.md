@@ -4,9 +4,11 @@ Plugin to use [webpack](http://webpack.github.io/) with [jest](https://facebook.
 
 ## Warning
 
-This package is a work in progress, may contain unexpected behaviour and other issues. Almost it is an experiment.
+This package is deprecated.
 
-*For best experience, use not the code, but the idea.*
+Please use https://github.com/mzgoddard/jest-webpack
+
+More info: https://github.com/ColCh/jest-webpack/issues/6
 
 ## Usage
 
