@@ -8,12 +8,6 @@ This package is a work in progress, may contain unexpected behaviour and other i
 
 *For best experience, use not the code, but the idea.*
 
-## Installation
-
-```sh
-$ npm install --save-dev jest-webpack
-```
-
 ## Usage
 
 See [test/fixtures/jest_tests](test/fixtures/jest_tests) dir for example. 
